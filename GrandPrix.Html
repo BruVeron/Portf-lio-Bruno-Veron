@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="GrandPrix.css">
+</head>
+<body>
+    <h1>Galeria de Imagens</h1>
+
+    <div class="carrossel">
+
+        <button class="seta esquerda" onclick="voltar()">&#10094;</button>
+
+        <div class="imagens" id="imagens">
+
+            <img src="img/GrandPrix1.jpeg" onclick="abrirImagem(this)">
+            <img src="img/GrandPrix2.jpeg" onclick="abrirImagem(this)">
+            <img src="img/GrandPrix3.jpeg" onclick="abrirImagem(this)">
+            <img src="img/GrandPrix4.jpeg" onclick="abrirImagem(this)">
+            <img src="img/GrandPrix5.jpeg" onclick="abrirImagem(this)">
+            <img src="img/GrandPrix6.jpeg" onclick="abrirImagem(this)">
+            <img src="img/GrandPrix7.jpeg" onclick="abrirImagem(this)">
+            <img src="img/GrandPrix8.jpeg" onclick="abrirImagem(this)">
+            <img src="img/GrandPrix9.jpeg" onclick="abrirImagem(this)">
+
+        </div>
+
+        <button class="seta direita" onclick="avancar()">&#10095;</button>
+
+    </div>
+
+
+    <!-- TELA DA IMAGEM AMPLIADA -->
+
+    <div class="modal" id="modal" onclick="fecharImagem()">
+
+        <button class="fechar" onclick="fecharImagem()">&#10005;</button>
+
+        <img id="imagemGrande" onclick="event.stopPropagation()">
+
+    </div>
+
+    <script src="GrandPrix.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+body{
+    color: white;
+    background-color:purple;
+    background-image: url(./img/chainsaw-man-manga-series-2022-series-3840x2160-8914.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.section{
+    left: 0%;
+    background: rgba(0, 0, 0, 0.3);
+    margin: 0;
+}
+p{
+    text-align: center;
+}
+ul{
+    display:flex;
+    justify-content: space-between;
+    list-style-type: none;
+    align-items: center;
+    padding: 16px;
+}
+a {
+    color: rgb(1, 1, 1);
+    text-decoration: none;
+}
+.center{
+    text-align: center;
+    
+
+}
+
+footer img{
+    width: 300px;
+    height: 200px;
+}
+g{
+    border-width: 50%;
+    border: 10px solid white;
+}
+.retangulo {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    border-left: 5px solid black;
+}
+.retangulo:hover{
+    transform: translateY(-5px);
+}
+.retangulo1{
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    border-left: 5px solid black;
+}
+    
+.divisões:hover {
+    transform: translateY(-5px);
+}
+.divisões {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    border-left: 5px solid black;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+.eu{
+     border: 14px solid white;
+     align-items: center;
+     border-radius: 50%;
+}

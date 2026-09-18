@@ -1,0 +1,15 @@
+body{
+    color: rgb(19, 18, 18);
+    background-color:gray;   
+}
+.center{
+    text-align: center;
+}
+p{
+    color: white;
+}
+.fixed{
+  position: fixed;
+  top: 0;
+  left: 0;
+}

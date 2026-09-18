@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+body {
+    background-image: url(./img/image\ copy\ 8.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+}
+ul{
+    display:flex;
+    justify-content: space-between;
+    list-style-type: none;
+    align-items:center;
+    padding: 16px;
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+
+header img{
+    width: 250px;
+    height: 200;
+    border-radius: 50%;
+    border: 5px solid blueviolet
+}
+.center{
+    text-align: center;
+}
+
+footer img{
+    width: 300px;
+    height: 200px;
+}
+.Áreas:hover {
+    transform: translateY(-5px);
+}
+.Áreas a:hover{
+    color: purple;
+}
+.ÁreasL:hover{
+    transform: translateY(-5px);
+}
+.ÁreasL a:hover{
+    color: gray;
+}
+.ÁreasH:hover{
+    transform: translateY(-5px);
+}
+.ÁreasH a:hover{
+    color: red;
+}
+.ÁreasN:hover{
+    transform: translateY(-5px);
+}
+.ÁreasN a:hover{
+    color: gold;
+}
+.ÁreasS:hover{
+    transform: translateY(-5px);
+}
+.ÁreasS a:hover{
+    color: green;
+}
+
+.titulo span {
+    font-size: 16px;
+    color: white;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.titulo span:hover {
+    color: #737373;
+    text-shadow:
+    0 0 5px #d9d9d9,
+    0 0 10px #bfbfbf,
+    0 0 20px #a6a6a6,
+    0 0 40px #737373,
+    0 0 60px #595959;
+}

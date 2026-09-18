@@ -1,0 +1,23 @@
+p{
+    color: #fff;
+    text-decoration: none;
+}
+body{
+    color: rgb(19, 18, 18);
+    background-color: rgb(83, 6, 6);
+    background-image: url(./img/Vampiro1.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 98vh;
+    width: 95%;
+}
+.center{
+    text-align: center;
+}
+.fixed{
+  position: fixed;
+  top: 0;
+  left: 0;
+}

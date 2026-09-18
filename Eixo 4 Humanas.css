@@ -1,0 +1,10 @@
+body{
+    color: rgb(19, 18, 18);
+    background-color: rgb(83, 6, 6);
+    background-image: url(./img/Vampiro4.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 86vh;
+    width: 97%;
+}

@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: purple;
+    padding: 40px;
+}
+
+.anexos {
+    max-width: 900px;
+    margin: auto;
+}
+
+.anexos h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.anexos p {
+    text-align: center;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.lista-anexos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.anexo {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    border-left: 5px solid #3498db;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.anexo:hover {
+    transform: translateY(-5px);
+}
+
+.anexo h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.anexo p {
+    text-align: left;
+    margin-bottom: 15px;
+    color: #666;
+}
+
+.anexo a {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #3498db;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+}
+
+.anexo a:hover {
+    background-color: #217dbb;
+}

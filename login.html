@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="center">
+        <h1>
+            Login
+        </h1>
+
+        <form onsubmit="logar(); return false">
+            
+            <div class="txt_field">
+
+                <input type="text" id="login" required>
+
+                <label>Email</label>
+            
+            </div>
+
+            <div class="txt_field">
+
+                <input type="password" id="senha" required>
+
+                <label>Senha</label>
+
+            </div>
+
+            <div class="pass">
+
+                Esqueceu a senha?
+
+            </div>
+
+            <div id="mensagem"></div>
+
+
+            <div class="botoes">
+
+                <input
+                    type="submit"
+                    value="conectar"
+                    class="btn-conectar"
+
+                >
+
+                <input 
+                    type="button"
+                    value="cancelar"
+                    class="btn-cancelar"
+                    onclick="cancelar()"
+                
+                >
+
+            </div>
+
+            <div class="signup_link">
+
+                <a href="#">
+                    Não é membro? Cadastre-se!
+                </a>
+
+            </div>
+
+        </form>
+
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>

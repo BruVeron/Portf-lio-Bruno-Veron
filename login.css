@@ -1,0 +1,280 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+
+    margin: 0;
+
+    padding: 0;
+
+    font-family: 'Times new roman', Times, serif;
+
+    background: linear-gradient(
+        120deg,
+        #291d6e,
+        #130e30,
+        #200955,
+        #110a38
+    );
+
+    background-image: url(./img/Kris.jpeg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    height: 100vh;
+
+    overflow: hidden;
+
+}
+
+.center{
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 400px;
+
+    background: white;
+
+    border-radius: 10px;
+
+    padding: 0 40px 30px 40px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+
+}
+
+.center h1{
+
+    text-align: center;
+
+    padding: 0 0 20px 0;
+
+    border-bottom: 1px solid rgb(7, 3, 65);
+
+}
+
+form .txt_field{
+
+    position: relative;
+
+    border-bottom: 2px solid #adadad;
+
+    margin: 30px 0;
+
+}
+
+.txt_field input{
+
+    width: 100%;
+
+    padding: 0 5px;
+
+    height: 40px;
+
+    font-size: 16px;
+
+    border: none;
+
+    background: none;
+
+    outline: none;
+
+}
+
+.txt_field label{
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 5px;
+
+    color: #0c1358;
+
+    transform: translateY(-50%);
+
+    font-size: 16px;
+
+    pointer-events: none;
+
+    transition: 0.5s;
+
+}
+
+.txt_field input:focus ~ label,
+.txt_field input:valid ~ label {
+
+    top: -5px;
+
+    color: #2712a0;
+
+}
+
+.pass{
+    
+    margin-bottom: 20px;
+
+    color: #333;
+
+    cursor: pointer;
+
+}
+
+.pass:hover{
+
+    text-decoration: underline;
+
+}
+
+.botoes{
+
+    display: flex;
+
+    gap: 15px;
+
+    width: 100%;
+}
+
+.botoes input{
+
+    flex: 1;
+
+    height: 50px;
+
+    border-radius: 25px;
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    outline: none;
+
+    transition: 0.3s;
+
+}
+
+.btn-conectar {
+
+    border: 1px solid #2980b9;
+
+    background: #2980b9;
+
+    color: white;
+
+}
+
+.btn-conectar:hover{
+
+    background: rgb(201, 0, 0);
+
+    border-color: rgb(201, 0, 0);
+
+}
+
+.btn-cancelar{
+
+    border: 1px solid #777;
+    background: #777;
+    color: white;
+
+}
+
+.btn-cancelar:hover{
+
+    background: rgb(201, 0, 0);
+
+}
+
+.signup_link{
+
+    margin: 30px 0 0;
+
+    text-align: center;
+
+    font-size: 16px;
+
+}
+
+.signup-link a {
+
+    text-decoration: none;
+
+    color: #113968;
+
+}
+
+.signup-link a:hover{
+
+    text-decoration: underline;
+
+}
+
+.erro{
+
+    text-align: center;
+
+}
+
+#mensagem{
+
+    display: block;
+
+    width: 100%;
+
+    text-align: center;
+
+    color: #b30000;
+
+    border-radius: 6px;
+
+    padding: 10px;
+
+    margin: px 0;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+}
+
+.texto-erro{
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    color: #666;
+
+}
+
+.texto-ajuda{
+
+    font-size: 15px;
+
+    color: #666;
+
+    margin-bottom: 30px;
+
+}
+
+@media (max-width: 500px){
+
+    .center{
+
+        width: 90%;
+
+        padding: 0 25px 25px 2px;
+
+    }
+}

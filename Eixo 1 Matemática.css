@@ -1,0 +1,21 @@
+body{
+    background-color: purple;
+    background-image: url(./img/Panacea\ 1.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 95vh;
+    width: 95%;
+}
+.center{
+    text-align: center;
+}
+p{
+    color: #fff;
+}
+.fixed{
+  position: fixed;
+  top: 0;
+  left: 0;
+}

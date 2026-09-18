@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="VisitaVirtex.css">
+</head>
+<body>
+
+    <h1>Galeria de Imagens</h1>
+
+    <div class="carrossel">
+
+        <button class="seta esquerda" onclick="voltar()">&#10094;</button>
+
+        <div class="imagens" id="imagens">
+
+            <img src="img/Virtex1.jpg" onclick="abrirImagem(this)">
+            <img src="img/Virtex2.jpg" onclick="abrirImagem(this)">
+            <img src="img/Virtex3.jpg" onclick="abrirImagem(this)">
+            <img src="img/Virtex4.jpg" onclick="abrirImagem(this)">
+            <img src="img/Virtex5.jpg" onclick="abrirImagem(this)">
+            <img src="img/Virtex6.jpg" onclick="abrirImagem(this)">
+
+        </div>
+
+        <button class="seta direita" onclick="avancar()">&#10095;</button>
+
+    </div>
+
+
+    <!-- TELA DA IMAGEM AMPLIADA -->
+
+    <div class="modal" id="modal" onclick="fecharImagem()">
+
+        <button class="fechar" onclick="fecharImagem()">&#10005;</button>
+
+        <img id="imagemGrande" onclick="event.stopPropagation()">
+
+    </div>
+
+
+    <script src="VisitaVirtex.js"></script>
+
+</body>
+
+</html>
