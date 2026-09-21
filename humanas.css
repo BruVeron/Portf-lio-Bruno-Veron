@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: 0;
+    box-sizing: border-box;
 }
 body {
     background-image: url(./img/1000263537_0d9986104e6d46766e8a06447564f3fe-25_03_2026\,\ 12_58_59.jpg);
