@@ -54,7 +54,7 @@ fetch("http://localhost:3000/api/login", {
         mensagem.style.color = "green";
 
         setTimeout(() => {
-            window.location.href = "abertura.html";
+            window.location.href = "Abertura.html";
         }, 1000);
 
     } else {

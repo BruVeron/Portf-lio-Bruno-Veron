@@ -69,7 +69,7 @@ footer img{
 }
 
 .titulo span {
-    font-size: 16px;
+    font-size: 18px;
     color: white;
     transition: 0.3s;
     cursor: pointer;
@@ -82,4 +82,69 @@ footer img{
     0 0 20px #a6a6a6,
     0 0 40px #737373,
     0 0 60px #595959;
+}
+.tituloH span {
+    font-size: 18px;
+    color: white;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.tituloH span:hover {
+    color: #ff4d4d;
+
+    text-shadow:
+        0 0 5px #ff8080,
+        0 0 10px #ff4d4d,
+        0 0 20px #ff1a1a,
+        0 0 40px #cc0000,
+        0 0 60px #8b0000;
+}
+.tituloN span {
+    font-size: 18px;
+    color: white;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.tituloN span:hover {
+    color: #ffd700;
+
+    text-shadow:
+        0 0 5px #fff2a6,
+        0 0 10px #ffe066,
+        0 0 20px #ffd000,
+        0 0 40px #cc9900,
+        0 0 60px #996600;
+}
+.tituloM span {
+    font-size: 18px;
+    color: white;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.tituloM span:hover {
+    color: #b84dff;
+
+    text-shadow:
+        0 0 5px #e6b3ff,
+        0 0 10px #cc80ff,
+        0 0 20px #b84dff,
+        0 0 40px #8000cc,
+        0 0 60px #4b0082;
+}
+.tituloS span {
+    font-size: 16px;
+    color: white;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.tituloS span:hover {
+    color: #33cc66;
+
+    text-shadow:
+        0 0 5px #b3ffcc,
+        0 0 10px #66ff99,
+        0 0 20px #33cc66,
+        0 0 40px #009933,
+        0 0 60px #006622;
 }

@@ -8,7 +8,7 @@ CREATE TABLE if not exists usuarios (
     senha VARCHAR(100) NOT NULL
 );
 
-
 INSERT INTO usuarios (email, senha)
 VALUES ('admi@email.com', 'Ablubleble');
+
 SELECT * FROM usuarios;
