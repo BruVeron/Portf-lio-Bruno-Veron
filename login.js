@@ -18,7 +18,7 @@ if (!email.includes("@")) {
 
     return;
 }
-fetch("https://portfolio-bruno.onrender.com/api/login", {
+fetch("http://localhost:3000", {
 
     method: "POST",
 

@@ -41,7 +41,7 @@ function cadastrar() {
 
     // Envia os dados para o servidor
 
-    fetch("https://portfolio-bruno.onrender.com/api/cadastro", {
+    fetch("http://localhost:3000", {
 
         method: "POST",
 
