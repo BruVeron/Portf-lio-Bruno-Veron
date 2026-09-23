@@ -41,7 +41,7 @@ function cadastrar() {
 
     // Envia os dados para o servidor
 
-    fetch("https://bruveron.github.io/Portf-lio-Bruno-Veron/api/cadastro", {
+    fetch("https://portfolio-bruno.onrender.com/api/cadastro", {
 
         method: "POST",
 

@@ -18,7 +18,7 @@ if (!email.includes("@")) {
 
     return;
 }
-fetch("https://portifolio-bruno-veron.onrender.com/api/login", {
+fetch("https://portfolio-bruno.onrender.com/api/login", {
 
     method: "POST",
 
