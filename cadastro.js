@@ -41,7 +41,7 @@ function cadastrar() {
 
     // Envia os dados para o servidor
 
-    fetch("https://bruveron.github.io/Portf-lio-Bruno-Veron/cadastro.html", {
+    fetch("https://bruveron.github.io/Portf-lio-Bruno-Veron/api/cadastro", {
 
         method: "POST",
 
