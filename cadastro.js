@@ -41,7 +41,7 @@ function cadastrar() {
 
     // Envia os dados para o servidor
 
-    fetch("http://localhost:3000/api/cadastro", {
+    fetch("https://SEU-ENDERECO.onrender.com/api/cadastro", {
 
         method: "POST",
 

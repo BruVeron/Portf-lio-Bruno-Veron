@@ -18,7 +18,7 @@ if (!email.includes("@")) {
 
     return;
 }
-fetch("http://localhost:3000/api/login", {
+fetch("https://meu-projeto.onrender.com/api/login", {
 
     method: "POST",
 
