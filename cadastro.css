@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #050505, #1a1a1a, #080808);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+}
+
+/* Caixa principal */
+.center {
+    width: 400px;
+    background: #111;
+    padding: 40px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 0 15px rgba(255, 0, 0, 0.4),
+        0 0 40px rgba(255, 0, 0, 0.1);
+
+    border: 1px solid #292929;
+}
+
+/* Título */
+.center h1 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 35px;
+
+    color: white;
+
+    text-shadow:
+        0 0 5px rgba(255, 255, 255, 0.3);
+}
+
+/* Área dos campos */
+.txt_field {
+    position: relative;
+    margin: 30px 0;
+    border-bottom: 2px solid #555;
+}
+
+/* Campo */
+.txt_field input {
+    width: 100%;
+    padding: 8px 0;
+
+    background: transparent;
+    border: none;
+    outline: none;
+
+    color: white;
+    font-size: 16px;
+}
+
+/* Label */
+.txt_field label {
+    position: absolute;
+    left: 0;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #888;
+    font-size: 16px;
+
+    pointer-events: none;
+
+    transition: 0.3s;
+}
+
+/* Quando o campo estiver selecionado */
+.txt_field input:focus ~ label,
+.txt_field input:valid ~ label {
+    top: -8px;
+
+    color: #ff2020;
+    font-size: 13px;
+}
+
+/* Linha do campo */
+.txt_field::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -2px;
+
+    width: 0;
+    height: 2px;
+
+    background: #ff2020;
+
+    transition: 0.3s;
+}
+
+/* Animação da linha */
+.txt_field:focus-within::after {
+    width: 100%;
+}
+
+/* Mensagem de erro/sucesso */
+#mensagemCadastro {
+    min-height: 25px;
+
+    text-align: center;
+
+    margin: 10px 0;
+
+    font-size: 14px;
+}
+
+/* Área dos botões */
+.botoes {
+    display: flex;
+    gap: 12px;
+
+    margin-top: 25px;
+}
+
+/* Estilo geral dos botões */
+.botoes input {
+    flex: 1;
+
+    height: 45px;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+/* Botão cadastrar */
+.btn-conectar {
+    background: #e00000;
+    color: white;
+
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+}
+
+.btn-conectar:hover {
+    background: #ff2020;
+
+    box-shadow:
+        0 0 10px rgba(255, 0, 0, 0.7),
+        0 0 25px rgba(255, 0, 0, 0.3);
+
+    transform: translateY(-2px);
+}
+
+/* Botão cancelar */
+.btn-cancelar {
+    background: #292929;
+    color: #ddd;
+
+    border: 1px solid #444 !important;
+}
+
+.btn-cancelar:hover {
+    background: #3a3a3a;
+    color: white;
+
+    transform: translateY(-2px);
+}
+
+/* Link para login */
+.signup_link {
+    text-align: center;
+
+    margin-top: 25px;
+
+    font-size: 14px;
+}
+
+.signup_link a {
+    color: #aaa;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.signup_link a:hover {
+    color: #ff2020;
+
+    text-shadow: 0 0 8px rgba(255, 0, 0, 0.6);
+}
+
+/* Efeito ao passar o mouse sobre o formulário */
+.center {
+    transition: 0.3s;
+}
+
+.center:hover {
+    box-shadow:
+        0 0 20px rgba(255, 0, 0, 0.5),
+        0 0 50px rgba(255, 0, 0, 0.15);
+}
+
+/* Responsividade para celular */
+@media (max-width: 500px) {
+
+    .center {
+        width: 90%;
+        padding: 30px 25px;
+    }
+
+    .center h1 {
+        font-size: 28px;
+    }
+
+    .botoes {
+        flex-direction: column;
+    }
+
+    .botoes input {
+        width: 100%;
+    }
+}

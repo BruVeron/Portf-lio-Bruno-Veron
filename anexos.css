@@ -7,9 +7,14 @@
 
 body {
     background-color: purple;
-    padding: 40px;
+    background-image: url(./img/Loki.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
 }
-
 .anexos {
     max-width: 900px;
     margin: auto;
@@ -17,7 +22,7 @@ body {
 
 .anexos h2 {
     text-align: center;
-    color: #2c3e50;
+    color: white;
     margin-bottom: 10px;
 }
 
