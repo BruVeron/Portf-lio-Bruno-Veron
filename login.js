@@ -1,81 +1,56 @@
-function logar() {
-var email = document.getElementById("login").value.trim();
-var senha = document.getElementById("senha").value;
-var mensagem = document.getElementById("mensagem");
+// Configuração do cliente Supabase
+const SUPABASE_URL = "https://nyiyemrhoircfyxbvbrh.supabase.co";
+const SUPABASE_ANON_KEY = "sb_publishable_hW1mcUXS1v02FHVCK6Ei9w_3K6ac_nv";
 
-if (!email || !senha) {
+const _supabase = _supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
-    mensagem.textContent = "Preencha todos os campos.";
-    mensagem.style.color = "red";
+async function logar(event) {
+    if (event) event.preventDefault();
 
-    return;
-}
+    const email = document.getElementById("login").value.trim();
+    const senha = document.getElementById("senha").value;
+    const mensagem = document.getElementById("mensagem");
 
-if (!email.includes("@")) {
-
-    mensagem.textContent = "Digite um e-mail válido.";
-    mensagem.style.color = "red";
-
-    return;
-}
-
-fetch("http://localhost:3000/api/login", {
-
-    method: "POST",
-
-    headers: {
-        "Content-Type": "application/json"
-    },
-
-    body: JSON.stringify({
-        email: email,
-        senha: senha
-    })
-
-})
-
-.then(response => {
-
-    console.log("Status:", response.status);
-
-    if (!response.ok) {
-        return response.json().then(data => {
-            throw new Error(data.message);
-        });
-    }
-
-    return response.json();
-})
-
-.then(data => {
-
-    if (data.success) {
-
-        mensagem.textContent = data.message;
-        mensagem.style.color = "green";
-
-        setTimeout(() => {
-            window.location.href = "Abertura.html";
-        }, 1000);
-
-    } else {
-
-        mensagem.textContent = data.message;
+    if (!email || !senha) {
+        mensagem.textContent = "Preencha todos os campos.";
         mensagem.style.color = "red";
-
+        return;
     }
 
-})
+    mensagem.textContent = "Autenticando...";
+    mensagem.style.color = "blue";
 
-.catch(error => {
+    try {
+        // Autenticação direta com o Supabase Auth
+        const { data, error } = await _supabase.auth.signInWithPassword({
+            email: email,
+            password: senha,
+        });
 
-    console.error("Erro:", error);
+        if (error) {
+            mensagem.textContent = error.message || "Erro ao realizar login.";
+            mensagem.style.color = "red";
+            return;
+        }
 
-    mensagem.textContent =
-        "Não foi possível conectar ao servidor.";
+        if (data.user) {
+            mensagem.textContent = "Login realizado com sucesso!";
+            mensagem.style.color = "green";
 
-    mensagem.style.color = "red";
+            setTimeout(() => {
+                window.location.href = "Abertura.html";
+            }, 1000);
+        }
+    } catch (err) {
+        console.error("Erro inesperado:", err);
+        mensagem.textContent = "Ocorreu um erro ao conectar ao servidor.";
+        mensagem.style.color = "red";
+    }
+}
 
-});
-
+function cancelar() {
+    document.getElementById("login").value = "";
+    document.getElementById("senha").value = "";
+    const mensagem = document.getElementById("mensagem");
+    if (mensagem) mensagem.textContent = "";
 }

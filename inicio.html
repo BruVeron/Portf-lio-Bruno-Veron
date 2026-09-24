@@ -1,134 +1,153 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="img/jjk.png" type="image/x-icon">
     <title>PORTFÓLIO</title>
+    <!-- SDK oficial do Supabase via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body>
-    <head>
-        <strong>
-         <ul>
-            <div class="divisões">
-            <li>
-                <a href="project.html">Projetos </a>
-            </li>
-            </div>
-            <div class="divisões">
-            <li>
-                <a href="contact.html">Contatos </a>    
-            </li>
-            </div>
-            <div class="divisões">
-            <li>
-                <a href="pessoal.html">Pessoal</a>
-            </li>
-            </div>
-            <div class="divisões">
-            <li>
-                <a href="anexos.html">Anexos</a>
-            </li>
-            </div>
-            <div class="divisões">
-            <li>
-                <a href="conhecimento.html">Conhecimento</a>
-            </li>
-            </div>
-        </ul>
-        </strong>
-    </head>
-    <div class="center">
-        <a href="https://www.canva.com/design/DAHBl4aWQTE/D0ULvXAN1N-6wfTBwp5QCg/edit">
-    <img src="img/Eu.jpg" width="300" class="eu"></a>
-    </div>
-        <header>
-            <div class="center">
-            <img src="">
+
+    <header>
+        <nav>
+            <ul>
+                <li class="divisões"><a href="project.html">Projetos</a></li>
+                <li class="divisões"><a href="contact.html">Contatos</a></li>
+                <li class="divisões"><a href="pessoal.html">Pessoal</a></li>
+                <li class="divisões"><a href="anexos.html">Anexos</a></li>
+                <li class="divisões"><a href="conhecimento.html">Conhecimento</a></li>
+                <li class="divisões"><a href="#" onclick="deslogar()">Sair</a></li>
+            </ul>
+        </nav>
+
+        <div class="center">
+            <a href="https://www.canva.com/design/DAHBl4aWQTE/D0ULvXAN1N-6wfTBwp5QCg/edit">
+                <img src="img/Eu.jpg" width="300" class="eu" alt="Foto de Bruno Veron">
+            </a>
             <h1>Bruno Veron Alves de Moura
                 <br> 17 anos
-                <br> estou cursando o 3° Ano do Ensino médio</h1>
-        </header>
-        <main>
-            <section class="section">
-                <h3>
-                    Sobre mim:
-                </h3>
-                <p> 
-                    Meu nome é Bruno Veron, tenho 17 anos, tenho uma irmã mais velha, moro em uma casa com meu pai,
-                    minha irmã e minha mãe, eu tenho uma gata e um cachorro, e daqui pro final do ano irei
-                    me decidir melhor entre qual faculdade ou curso eu quero me profissionalizar.
-                </p>
-                <h2>
-                    Atualmente:
-                </h2>
-                <p> 
-                    Estou cursando o 3° ano do ensino médio junto ao curso de técnico de informática para a internet do Senai.
-                </p>
-            </div>
-            </section>
-            <div class="center">
+                <br> Cursando o 3° Ano do Ensino Médio
+            </h1>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <h3>Sobre mim:</h3>
+            <p> 
+                Meu nome é Bruno Veron, tenho 17 anos, tenho uma irmã mais velha, moro em uma casa com meu pai,
+                minha irmã e minha mãe, eu tenho uma gata e um cachorro, e daqui pro final do ano irei
+                me decidir melhor entre qual faculdade ou curso eu quero me profissionalizar.
+            </p>
+
+            <h2>Atualmente:</h2>
+            <p> 
+                Estou cursando o 3° ano do ensino médio junto ao curso de técnico de informática para a internet do Senai.
+            </p>
+        </section>
+
+        <!-- Seção de Interesses / Links Galeria 1 -->
+        <section class="center">
             <ul>
                 <li>
                     <div class="retangulo">
-            <a href="https://ordemparanormal.com.br/">
-             <img src="img/image copy 5.png" width="110" alt="imagem 1"> </img></a></div>
-            </li>
-            <li>
-                <div class="retangulo">
-            <a href="https://hollowknight.fandom.com/wiki/Hollow_Knight_Wiki">
-            <img src="img/image copy 6.png" width="110" alt="imagem 2"></img></a></div>
-            </li>
-            <li>
-                <div class="retangulo">
-             <a href="https://jujutsukaisen.jp/">
-            <img src="img/image copy 7.png" width="110" alt="imagem 3"></img></a></div>
-            </li>
-            <li>
-                <div class="retangulo">
-            <a href="https://bluelock-anime-en.com/">
-            <img src="img/Blue Lock.png" width="100" height="40" alt="imagem 4"></img></a></div>
-            </li>
+                        <a href="https://ordemparanormal.com.br/">
+                            <img src="img/image copy 5.png" width="110" alt="Ordem Paranormal">
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="retangulo">
+                        <a href="https://hollowknight.fandom.com/wiki/Hollow_Knight_Wiki">
+                            <img src="img/image copy 6.png" width="110" alt="Hollow Knight">
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="retangulo">
+                        <a href="https://jujutsukaisen.jp/">
+                            <img src="img/image copy 7.png" width="110" alt="Jujutsu Kaisen">
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="retangulo">
+                        <a href="https://bluelock-anime-en.com/">
+                            <img src="img/Blue Lock.png" width="100" height="40" alt="Blue Lock">
+                        </a>
+                    </div>
+                </li>
             </ul>
-            </div>
-        </main>
-        <main>
-            <div class="center">
-                <ul>
+        </section>
+
+        <!-- Seção de Interesses / Links Galeria 2 -->
+        <section class="center">
+            <ul>
                 <li>
                     <div class="retangulo">
                         <a href="https://deltarune.com/">
-                        <img src="img/DELTARUNE.png" width="130" height="50" alt="imagem 1"></img></a></div>
+                            <img src="img/DELTARUNE.png" width="130" height="50" alt="Deltarune">
+                        </a>
+                    </div>
                 </li>
                 <li>
                     <div class="retangulo">
                         <a href="https://chainsawman.dog/">
-                        <img src="img/Cahinsaw man.png" width="130" height="50" alt="imagem 2"></img></a></div>
+                            <img src="img/Cahinsaw man.png" width="130" height="50" alt="Chainsaw Man">
+                        </a>
+                    </div>
                 </li>
                 <li>
                     <div class="retangulo">
                         <a href="https://www.cupheadgame.com/">
-                        <img src="img/Cuphead.png" width="130" height="65" alt="imagem 3"></a></div>
+                            <img src="img/Cuphead.png" width="130" height="65" alt="Cuphead">
+                        </a>
+                    </div>
                 </li>
                 <li>
                     <div class="retangulo">
                         <a href="https://www-marvel-com.translate.goog/movies/spider-man-brand-new-day?_x_tr_sl=en&_x_tr_tl=pt&_x_tr_hl=pt&_x_tr_pto=tc">
-                        <img src="img/Homem-aranha.png" width="130" height="65" alt="imagem 4"></a></div>
+                            <img src="img/Homem-aranha.png" width="130" height="65" alt="Homem-Aranha">
+                        </a>
+                    </div>
                 </li>
-                </ul>
-             </div>
-        </main>
-        <main>
-            <footer>
-            <p>[©2026] <span id="ano"></span> [hAcKeD bY aNgEl Of ThE nIgHt]. Todos os direitos reservados </p>
-            <strong>
-                <p>
-                    Tutores: Regiane Leal e Cleiton Jericó
-                </p>
-            </strong>
-            </footer>
-            </div>
-        </main>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>©<span id="ano"></span> [hAcKeD bY aNgEl Of ThE nIgHt]. Todos os direitos reservados.</p>
+        <p><strong>Tutores:</strong> Regiane Leal e Cleiton Jericó</p>
+    </footer>
+
+    <!-- Script para validação de autenticação do Supabase -->
+    <script>
+        const SUPABASE_URL = "https://nyiyemrhoircfyxbvbrh.supabase.co";
+        const SUPABASE_ANON_KEY = "sb_publishable_hW1mcUXS1v02FHVCK6Ei9w_3K6ac_nv";
+        const _supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+        // Preenche o ano atual dinamicamente no footer
+        document.getElementById("ano").textContent = new Date().getFullYear();
+
+        // Verifica se o usuário está logado
+        async function checarSessao() {
+            const { data: { session } } = await _supabase.auth.getSession();
+            if (!session) {
+                // Redireciona para o login se não houver usuário autenticado
+                window.location.href = "index.html";
+            }
+        }
+
+        // Função de Logout
+        async function deslogar() {
+            await _supabase.auth.signOut();
+            window.location.href = "index.html";
+        }
+
+        checarSessao();
+    </script>
 </body>
 </html>
