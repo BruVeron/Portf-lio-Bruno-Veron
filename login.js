@@ -1,8 +1,9 @@
 // Configuração do cliente Supabase
 const SUPABASE_URL = "https://nyiyemrhoircfyxbvbrh.supabase.co";
-const SUPABASE_ANON_KEY = "sb_publishable_hW1mcUXS1v02FHVCK6Ei9w_3K6ac_nv";
+const SUPABASE_ANON_KEY = "sb_publishable_hW1mcUXS1v02FHVCK6Ei9w_3K6ac_nv"; // Certifique-se de que esta é a chave public/anon real do painel do Supabase
 
-const _supabase = _supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+// Correção da inicialização:
+const _supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 async function logar(event) {
     if (event) event.preventDefault();
@@ -21,7 +22,6 @@ async function logar(event) {
     mensagem.style.color = "blue";
 
     try {
-        // Autenticação direta com o Supabase Auth
         const { data, error } = await _supabase.auth.signInWithPassword({
             email: email,
             password: senha,

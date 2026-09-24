@@ -1,116 +1,57 @@
-function cadastrar() {
+const SUPABASE_URL = "https://nyiyemrhoircfyxbvbrh.supabase.co";
+const SUPABASE_ANON_KEY = "sb_publishable_hW1mcUXS1v02FHVCK6Ei9w_3K6ac_nv";
 
-    var email = document.getElementById("emailCadastro").value.trim();
-    var senha = document.getElementById("senhaCadastro").value;
-    var confirmarSenha = document.getElementById("confirmarSenha").value;
-    var mensagem = document.getElementById("mensagemCadastro");
+const _supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
+async function cadastrar(event) {
+    if (event) event.preventDefault();
 
-    // Verifica se os campos estão preenchidos
+    const email = document.getElementById("emailCadastro").value.trim();
+    const senha = document.getElementById("senhaCadastro").value;
+    const confirmarSenha = document.getElementById("confirmarSenha").value;
+    const mensagem = document.getElementById("mensagemCadastro");
 
     if (!email || !senha || !confirmarSenha) {
-
         mensagem.textContent = "Preencha todos os campos.";
         mensagem.style.color = "red";
-
         return;
     }
-
-
-    // Verifica se o e-mail possui @
-
-    if (!email.includes("@")) {
-
-        mensagem.textContent = "Digite um e-mail válido.";
-        mensagem.style.color = "red";
-
-        return;
-    }
-
-
-    // Verifica se as senhas são iguais
 
     if (senha !== confirmarSenha) {
-
-        mensagem.textContent = "As senhas não são iguais.";
+        mensagem.textContent = "As senhas não coincidem.";
         mensagem.style.color = "red";
-
         return;
     }
 
+    mensagem.textContent = "Cadastrando...";
+    mensagem.style.color = "blue";
 
-    // Envia os dados para o servidor
-
-    fetch("http://localhost:3000/api/cadastro", {
-
-        method: "POST",
-
-        headers: {
-            "Content-Type": "application/json"
-        },
-
-        body: JSON.stringify({
+    try {
+        const { data, error } = await _supabase.auth.signUp({
             email: email,
-            senha: senha
-        })
+            password: senha,
+        });
 
-    })
-
-
-    .then(response => {
-
-        console.log("Status:", response.status);
-
-        return response.json();
-
-    })
-
-
-    .then(data => {
-
-        if (data.success) {
-
-            mensagem.textContent = data.message;
-            mensagem.style.color = "green";
-
-
-            // Depois de cadastrar,
-            // volta para o login
-
-            setTimeout(() => {
-
-                window.location.href = "index.html";
-
-            }, 1500);
-
-
-        } else {
-
-            mensagem.textContent = data.message;
+        if (error) {
+            mensagem.textContent = error.message || "Erro ao realizar cadastro.";
             mensagem.style.color = "red";
-
+            return;
         }
 
-    })
+        mensagem.textContent = "Cadastro realizado! Verifique seu e-mail se necessário ou faça login.";
+        mensagem.style.color = "green";
 
+        setTimeout(() => {
+            window.location.href = "index.html";
+        }, 2000);
 
-    .catch(error => {
-
-        console.error("Erro:", error);
-
-        mensagem.textContent =
-            "Não foi possível conectar ao servidor.";
-
+    } catch (err) {
+        console.error("Erro no cadastro:", err);
+        mensagem.textContent = "Ocorreu um erro ao conectar ao servidor.";
         mensagem.style.color = "red";
-
-    });
-
+    }
 }
 
-
-
 function voltarLogin() {
-
     window.location.href = "index.html";
-
 }
