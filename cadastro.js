@@ -41,7 +41,7 @@ function cadastrar() {
 
     // Envia os dados para o servidor
 
-    fetch("http://localhost:3000", {
+    fetch("http://localhost:3000/api/cadastro", {
 
         method: "POST",
 

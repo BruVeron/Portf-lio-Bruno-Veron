@@ -18,7 +18,7 @@ if (!email.includes("@")) {
 
     return;
 }
-fetch("http://localhost:3000", {
+fetch("http://localhost:3000/api/login", {
 
     method: "POST",
 
