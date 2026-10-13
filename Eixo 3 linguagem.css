@@ -1,4 +1,9 @@
 body{
+    background-image: url(img/Nidere.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     color: rgb(19, 18, 18);
     background-color:gray;   
 }
