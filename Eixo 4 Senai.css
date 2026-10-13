@@ -9,3 +9,11 @@ body{
 p{
     color: white;
 }
+.center{
+    text-align: center;
+}
+.fixed{
+  position: fixed;
+  top: 0;
+  left: 0;
+}
