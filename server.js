@@ -142,10 +142,6 @@ app.post('/api/cadastro', (req, res) => {
 });
 
 
-// ==============================
-// LOGIN
-// ==============================
-
 app.post('/api/login', (req, res) => {
 
     const { email, senha } = req.body;
