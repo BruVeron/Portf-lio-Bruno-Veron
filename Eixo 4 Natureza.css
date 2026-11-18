@@ -8,3 +8,14 @@ body{
     height: 85vh;
     width: 95%;
 }
+.center{
+    text-align: center;
+}
+p{
+    color: white;
+}
+.fixed{
+  position: fixed;
+  top: 0;
+  left: 0;
+}

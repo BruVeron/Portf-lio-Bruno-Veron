@@ -3,8 +3,20 @@ body{
     background-color: rgb(83, 6, 6);
     background-image: url(./img/Vampiro4.png);
     background-size: cover;
+    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     height: 86vh;
     width: 97%;
+}
+.center{
+    text-align: center;
+}
+p{
+    color: white;
+}
+.fixed{
+  position: fixed;
+  top: 0;
+  left: 0;
 }
