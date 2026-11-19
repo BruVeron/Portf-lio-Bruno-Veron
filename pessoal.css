@@ -1,29 +1,252 @@
-body{
-    background-color: violet;
-    background-image: url(./img);
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
-    width: 100%;
+
+/* Configuração geral */
+body {
+    margin: 0;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #f8e8fa, #e6d9ff);
     min-height: 100vh;
+}
+
+/* Área principal */
+.pagina-estudos {
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Título */
+.pagina-estudos h1 {
+    color: #593b83;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+/* Subtítulo */
+.subtitulo {
+    color: #76618c;
+    font-size: 16px;
+    margin-bottom: 35px;
+}
+
+/* Container da imagem */
+.imagem-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.75);
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(70, 40, 100, 0.15);
 }
-* {
-    margin: 0;
-    padding: 0;
+
+/* Imagem menor */
+.imagem-estudos {
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+    border-radius: 15px;
+    border: 3px solid white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+/* Efeito ao passar o mouse */
+.imagem-estudos:hover {
+    transform: scale(1.03);
+}
+
+
+/* Área dos cartões */
+.secoes-pessoais {
+    max-width: 1000px;
+    margin: 60px auto 30px;
+    text-align: center;
+}
+
+.secoes-pessoais h2 {
+    color: #593b83;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+/* Organização dos cartões */
+.cards-pessoais {
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    gap: 30px;
+    align-items: stretch;
+}
+
+/* Cartões principais */
+.card-pessoal {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 20px;
+    border: 2px solid white;
+    box-shadow: 0 8px 25px rgba(70, 40, 100, 0.15);
+    transition: 0.3s ease;
     box-sizing: border-box;
 }
 
-.container img {
-    object-fit: cover;
-    width: 80%;
-    max-width: 1200px;
-    height: auto;
-    border-radius: 20px;
-    display: block;
+.card-pessoal:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(70, 40, 100, 0.25);
+}
+
+/* História de vida maior */
+.card-historia {
+    padding: 40px 35px;
+    min-height: 390px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Projeto de vida */
+.card-projeto {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Ícones */
+.icone {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+/* Títulos */
+.card-pessoal h3 {
+    color: #68458e;
+    font-size: 23px;
+    margin: 5px 0 15px;
+}
+
+/* Textos */
+.card-pessoal p {
+    color: #71627c;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* Tópicos do projeto */
+.topico-projeto {
+    background: #f5edfc;
+    border-left: 4px solid #9676c5;
+    border-radius: 10px;
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.topico-projeto h4 {
+    color: #68458e;
+    font-size: 16px;
+    margin: 0 0 5px;
+}
+
+.topico-projeto p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* Celulares */
+@media (max-width: 700px) {
+    .cards-pessoais {
+        grid-template-columns: 1fr;
+    }
+
+    .card-historia {
+        min-height: 320px;
+        padding: 30px 20px;
+    }
+
+    .card-pessoal {
+        width: 100%;
+    }
+}
+
+
+/* Seção de currículo */
+.secao-curriculo {
+    max-width: 1000px;
+    margin: 60px auto;
+    text-align: center;
+}
+
+.secao-curriculo h2 {
+    color: #593b83;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+/* Cartão de currículo */
+.card-curriculo {
+    max-width: 650px;
+    margin: auto;
+    padding: 35px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid white;
+    border-radius: 22px;
+    box-shadow: 0 8px 25px rgba(70, 40, 100, 0.15);
+    transition: 0.3s ease;
+    box-sizing: border-box;
+}
+
+.card-curriculo:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 30px rgba(70, 40, 100, 0.25);
+}
+
+/* Ícone */
+.icone-curriculo {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+/* Título */
+.card-curriculo h3 {
+    color: #68458e;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+/* Descrição */
+.card-curriculo p {
+    color: #71627c;
+    font-size: 15px;
+    line-height: 1.8;
+    max-width: 500px;
+    margin: auto;
+}
+
+/* Botão */
+.botao-curriculo {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 13px 28px;
+    background: #9676c5;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.botao-curriculo:hover {
+    background: #68458e;
+    transform: scale(1.05);
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .card-curriculo {
+        margin: 0 10px;
+        padding: 25px 20px;
+    }
+
+    .secao-curriculo h2 {
+        font-size: 25px;
+    }
 }

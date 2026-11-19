@@ -6,3 +6,14 @@ body{
     background-position: center;
     background-repeat: no-repeat;
 }
+.center{
+    text-align: center;
+}
+p{
+    color: white;
+}
+.fixed{
+  position: fixed;
+  top: 0;
+  left: 0;
+}
